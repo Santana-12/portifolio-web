@@ -1,0 +1,217 @@
+@keyframes chroma-shift {
+    0% {
+        border-color: rgb(255, 0, 0);
+        color: rgb(255, 0, 0);
+        box-shadow: 0 0 25px rgba(255, 0, 0, 0.35);
+    }
+
+    33% {
+        border-color: rgb(150, 0, 255);
+        color: rgb(150, 0, 255);
+        box-shadow: 0 0 25px rgba(150, 0, 255, 0.35);
+    }
+
+    66% {
+        border-color: rgb(0, 150, 255);
+        color: rgb(0, 150, 255);
+        box-shadow: 0 0 25px rgba(0, 150, 255, 0.35);
+    }
+
+    100% {
+        border-color: rgb(255, 0, 0);
+        color: rgb(255, 0, 0);
+        box-shadow: 0 0 25px rgba(255, 0, 0, 0.35);
+    }
+}
+
+h1:focus {
+    outline: none;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+.invalid {
+    outline: 1px solid rgb(255, 0, 0);
+}
+
+.validation-message {
+    color: rgb(255, 0, 0);
+}
+
+.blazor-error-boundary {
+    background: rgb(0, 0, 0);
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 12px;
+}
+
+    .blazor-error-boundary::after {
+        content: "An error has occurred.";
+    }
+
+.darker-border-checkbox.form-check-input {
+    border-color: rgb(255, 255, 255);
+}
+
+html,
+body {
+    background: rgb(0, 0, 0);
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+.pagina-inicial {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    min-height: 100vh;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.secao-banner,
+.secao-destaques {
+    margin: 0 auto;
+    max-width: 1090px;
+}
+
+.secao-banner {
+    padding: 1.5rem 0 2rem;
+}
+
+.banner-principal {
+    background: linear-gradient(135deg, rgb(20, 20, 20), rgb(0, 0, 0));
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    padding: 2rem;
+    text-align: center;
+   
+    animation: chroma-shift 10s infinite ease-in-out;
+}
+
+.subtitulo-banner,
+.numero-destaque {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.subtitulo-banner {
+    color: rgb(255, 0, 0);
+    margin: 0 0 0.75rem;
+   
+    animation: chroma-shift 10s infinite ease-in-out;
+    box-shadow: none; 
+}
+
+.titulo-banner {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+.texto-banner {
+    line-height: 1.6;
+    margin: 1rem auto 0;
+    max-width: 38rem;
+    color: rgb(255, 255, 255);
+}
+
+.secao-destaques {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cartao-destaque {
+    background: rgb(15, 15, 15);
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 16px;
+    padding: 1.5rem;
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease;
+    
+    animation: chroma-shift 10s infinite ease-in-out;
+}
+
+    .cartao-destaque:hover {
+        transform: translateY(-5px);
+        
+        filter: brightness(1.2);
+    }
+
+.cartao-claro {
+    background: rgb(25, 25, 25);
+    color: rgb(255, 255, 255);
+}
+
+.cartao-escuro {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.cartao-destaque-contato {
+    background: rgb(20, 20, 20);
+}
+
+.numero-destaque {
+    color: rgb(255, 0, 0);
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    animation: chroma-shift 10s infinite ease-in-out;
+    box-shadow: none;
+}
+
+.cartao-destaque h2 {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 1.7rem;
+    margin: 0 0 0.75rem;
+    color: rgb(255, 255, 255);
+}
+
+.cartao-destaque p {
+    line-height: 1.65;
+    margin: 0 0 1.25rem;
+    color: rgb(255, 255, 255);
+}
+
+.cartao-destaque a {
+    color: rgb(255, 0, 0);
+    font-weight: 700;
+    text-decoration: none;
+    animation: chroma-shift 10s infinite ease-in-out;
+    box-shadow: none;
+}
+
+    .cartao-destaque a:hover,
+    .cartao-destaque a:focus {
+        color: rgb(255, 255, 255);
+        text-decoration: underline;
+        animation: none; 
+    }
+
+@media (max-width: 900px) {
+    .secao-destaques {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .pagina-inicial {
+        padding: 1rem 1rem 3rem;
+    }
+
+    .banner-principal,
+    .cartao-destaque {
+        border-radius: 13px;
+    }
+
+    .banner-principal {
+        padding: 1.5rem;
+    }
+}
